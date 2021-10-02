@@ -1,0 +1,202 @@
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+.title{
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.about {
+  font-size: 16px;
+}
+
+.curve {
+  transform: scale(1.27);
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+
+.logo {
+  transform: scale(1);
+}
+
+p {
+  line-height: 2rem;
+}
+
+.creator {
+  max-width: 3rem;
+}
+
+.credit {
+  text-shadow: 2px 2px 2px #757575;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.file-upload {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.file-upload__input {
+  display: none;
+}
+
+.file-upload__button {
+  -webkit-appearance: none;
+  background: #009879;
+  border: 2px solid #00745d;
+  border-radius: 4px;
+  outline: none;
+  padding: 0.5em 0.8em;
+  margin-right: 15px;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.file-upload__button:active {
+  background: #00745d;
+}
+
+.file-upload__label {
+  max-width: 250px;
+  font-size: 0.95em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.table-row {
+  height: 350px;
+  width: 80%;
+}
+
+.charts-css {
+  height: 300px;
+}
+
+@media (min-width: 600px) {
+  #results-chart .bar {
+    height: 400px;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #results-chart .bar {
+    height: 500px;
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+#my-chart {
+  padding-top: 0%;
+}
+
+#my-chart.line {
+  height: 297px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#bars {
+  --secondary-axes-color: #e0e0e0;
+  --secondary-axes-style: solid;
+  --secondary-axes-width: 1px;
+  padding-right: 10%;
+}
+
+#bars tbody td {
+  transform-origin: bottom;
+  animation: revealing-bars 20s linear 1;
+}
+
+@keyframes revealing-bars {
+  0%  { transform: scaleY( 0 ); }
+  15% { transform: scaleY( 1 ); }
+}
+
+#my-chart tbody td {
+  transform-origin: left;
+  animation: revealing-lines 20s linear 1;
+}
+
+@keyframes revealing-lines {
+  0%  { transform: scaleY( 0 ); }
+  15% { transform: scaleY( 1 ); }
+}
+
+#entire-bars {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 130px 1fr;
+  grid-template-rows: 297px 50px;
+  grid-template-areas:
+  "secondary-axis chart"
+  ".         primary-axis";;
+}
+#entire-bars > table {
+  grid-area: chart;
+}
+#entire-bars > .primary-axis {
+  grid-area: primary-axis;
+}
+#entire-bars > .secondary-axis {
+  grid-area: secondary-axis;
+  writing-mode: tb-rl;
+  transform: rotateZ(180deg);
+  font-weight: bold;
+}
+
+.secondary-axis-2 {
+  writing-mode: tb-rl;
+  transform: rotateZ(180deg);
+  padding-top: -50px;
+}

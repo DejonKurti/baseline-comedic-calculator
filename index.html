@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>MIT Comedic Calculator</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container section">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2 title">The Comedic Calculator</h1>
+        <div class="row center section">
+          <img class="logo" src="mit_logo.png">
+        </div>
+        <div class="row center section">
+          <a href="#file-selection" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="killian_winter.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Advanced Machine Learning Technology Enables Fast Results and Feedback</h5>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Designed and Tested by MIT Researchers</h5>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">The MIT "Funny Algorithm" has Analyzed Over 80 Million Videos</h5>
+          </div>
+        </div>
+        </div>
+        
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="col s12 center">
+            <h5>About</h5>
+          </div>
+          <p class="about col s12 center"> How many social scientists does it take to explain what makes something funny? It turns out that the answer is many. Although a number of theories have been 
+          offered to explain the concept of humor, what humor really is has remained elusive… until now. The MIT “Funny Algorithm,” developed by social 
+          scientists at the Massachusetts Institute of Technology, scores comedic performance along a number of dimensions, 
+          including delivery, originality, style, pace, and content. </p>
+          <p class="about col s12 center"> This algorithm was trained on 80 million publicly available video clips following the self-supervised learning method that is well-established in the field 
+          of artificial intelligence. This algorithm is the first of its kind aimed at quantifying humor. </p>
+          <p class="about col s12 center"> Algorithm use should be for educational or entertainment purposes only. The results of this tool are not psychological or psychiatric advice 
+          of any kind. Due to the evolving nature of this algorithm, we note that results are not without margins of error of orders of magnitude. Data from tool use will
+          be recorded anonymously (without any identifying information), and may be used for research. </p>
+          <div class="col s12 center">
+            <h5 class="section">Distribution of Video Clips Analyzed</h5>
+          </div>
+          <div class="col s12 center section">
+            <img class="curve" src="bell_curve_final.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="comedynight3.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Select a File</h4> <a id="file-selection"> </a>
+          <div class="file-upload">
+            <input class="file-upload__input" type="file" name="myFile[]" id="myFile" multiple>
+            <button class="file-upload__button" id="myButton" type="button">Choose File</button>
+            <span class="file-upload__label"></span>  
+          </div>
+        </div>
+      </div>
+      <div class="section results col s12 center" id="result"> 
+      </div>
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <div class="section table-wrap" style="display: none;" id="reveal">
+    <div class="table-div">
+      <div class="row table-row">
+        <div class="col s6 table-row" id="entire-bars">
+          <table class="charts-css column multiple data-spacing-20 show-labels show-primary-axis show-10-secondary-axes" id="bars">
+          
+            <tbody id="tbody">
+              <tr>
+                <th scope="row"> Delivery </th>
+                <td class="td" style="--size: calc(9.3 / 10); --color: rgba(240,50,50,0.75);"> <span class="data"> 93 </span> </td>
+              </tr>
+              <tr>
+                <th scope="row"> Originality </th>
+                <td class="td" style="--size: calc(8.8 / 10); --color: rgba(100,210,80,0.75);"> <span class="data"> 88 </span> </td>
+              </tr>
+              <tr>
+                <th scope="row"> Style </th>
+                <td class="td" style="--size: calc(9.5 / 10); --color: rgba(90,165,255,0.75);"> <span class="data"> 95 </span> </td>
+              </tr>
+              <tr>
+                <th scope="row"> Pace </th>
+                <td class="td" style="--size: calc(9 / 10); --color: rgba(170,90,240,0.75);"> <span class="data"> 90 </span> </td>
+              </tr>
+              <tr>
+                <th scope="row"> Content </th>
+                <td class="td" style="--size: calc(9.75 / 10); --color: rgba(255,180,50,0.75);"> <span class="data"> 98 </span> </td>
+              </tr>
+            </tbody>
+          
+          </table>   
+
+          <div class="secondary-axis"> Humor </div>
+        </div>
+          <div class="col s6">
+
+            <table class="charts-css line multiple show-primary-axis show-labels show-10-secondary-axes" id="my-chart">
+
+              <tbody>
+                <tr>
+                  <td style="--start: 0.0; --size: 0.4"> </td>
+                  <td style="--start: 0.0; --size: 0.2"> </td>
+                  <td style="--start: 0.0; --size: 0.5; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.0; --size: 0.7"> </td>
+                  <td style="--start: 0.0; --size: 0.15"> </td>
+                </tr>
+                <tr>
+                  <td style="--start: 0.4; --size: 0.2"> </td>
+                  <td style="--start: 0.2; --size: 0.1"> </td>
+                  <td style="--start: 0.5; --size: 0.55; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.7; --size: 0.2"> </td>
+                  <td style="--start: 0.15; --size: 0.8"> </td>
+                </tr>
+                <tr>
+                  <td style="--start: 0.2; --size: 0.3"> </td>
+                  <td style="--start: 0.1; --size: 0.7"> </td>
+                  <td style="--start: 0.55; --size: 0.35; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.2; --size: 0.5"> </td>
+                  <td style="--start: 0.8; --size: 0.65"> </td>
+                </tr>
+                <tr>
+                  <th scope="row"> Time </th>
+                  <td style="--start: 0.3; --size: 0.3"> </td>
+                  <td style="--start: 0.7; --size: 0.3"> </td>
+                  <td style="--start: 0.35; --size: 0.6; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.5; --size: 0.4"> </td>
+                  <td style="--start: 0.65; --size: 0.7"> </td>
+                </tr>
+                <tr>
+                  <td style="--start: 0.3; --size: 0.7"> </td>
+                  <td style="--start: 0.3; --size: 0.8"> </td>
+                  <td style="--start: 0.6; --size: 0.7; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.4; --size: 0.9"> </td>
+                  <td style="--start: 0.7; --size: 0.2"> </td>
+                </tr>
+                <tr>
+                  <td style="--start: 0.7; --size: 0.2"> </td>
+                  <td style="--start: 0.8; --size: 0.8"> </td>
+                  <td style="--start: 0.7; --size: 0.4; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.9; --size: 0.5"> </td>
+                  <td style="--start: 0.2; --size: 0.3"> </td>
+                </tr>
+                <tr>
+                  <td style="--start: 0.2; --size: 0.1"> </td>
+                  <td style="--start: 0.8; --size: 0.3"> </td>
+                  <td style="--start: 0.4; --size: 0.6; --color: rgba(170,90,240,0.75);"> </td>
+                  <td style="--start: 0.5; --size: 0.7"> </td>
+                  <td style="--start: 0.3; --size: 0.65"> </td>
+                </tr>
+              </tbody>
+
+              
+            </table>
+
+          </div>
+        </div>     
+      </div>
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive algorithm for comedians and listeners alike.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="blurredcity.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"></h5>
+          <p class="grey-text text-lighten-4">Please forward any questions/concerns to the team.</p>
+        </div>
+        <div class="col l6 offset-s6 s12">
+          <h5 class="white-text">Team Contact</h5>
+          <ul>
+            <li>Lead Researcher - Professor Tewfik</li>
+            <li>Research Assistant - Dejon Kurti</li>
+            <li>Research Assistant - Sari Strizik</li>
+            <li>Research Assistant - Ayah Al-Zubi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright MIT.
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize.js"></script>
+  <script src="init.js"></script>
+
+  </body>
+</html>
